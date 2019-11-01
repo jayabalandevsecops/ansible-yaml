@@ -8,3 +8,6 @@
     - name: to get values of variables from file
       debug:
         msg: "{{ my_name }}"
+    - name: second variable from file
+      debug:
+        msg: "{{ your_name }}"
