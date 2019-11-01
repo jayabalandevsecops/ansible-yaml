@@ -1,0 +1,10 @@
+- name: Playbook with variables from files
+  hosts: anode
+  remote_user: ansible
+  become: true
+  vars_files:
+    - variables.yml
+  tasks:
+    - name: to get values of variables from file
+      debug:
+        msg: "{{ my_name }}"
