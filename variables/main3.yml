@@ -1,0 +1,16 @@
+- name: list array - debug msg
+  hosts: anode
+  remote_user: ansible
+  become: true
+  vars:
+    mylist:
+      - msg-variable
+      - abcd-variable
+      - items list
+  tasks:
+    - name: debug message 1
+      debug:
+        msg: "{{ mylist[0] }}"
+    - name: debug message 2
+      debug:
+        msg: "{{ mylist.2 }}"
