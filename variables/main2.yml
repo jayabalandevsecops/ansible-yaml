@@ -1,0 +1,16 @@
+- name: playbook-tasks-debug
+  hosts: anode
+  remote_user: ansible
+  become: true
+  vars:
+    dict:
+      msg_var: sri ramajeyam..!
+      abcd: alphabets
+      lists: list of items
+  tasks:
+    - name: debug message 1
+      debug:
+        msg: "{{ dict['msg_var'] }}"
+    - name: debug message 2
+      debug:
+        msg: "{{ dict.lists }}"
