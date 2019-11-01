@@ -1,0 +1,13 @@
+- name: Play book for dict variables
+  hosts: anode
+  remote_user: ansible
+  become: true
+  vars:
+    dictabc:
+      msg_var: sri ramajeyam ...!
+      abc: abcdefg
+      lists: lists-variable
+  tasks:
+    - name: debug message - dict
+      debug:
+        msg: "{{ dictabc }}"

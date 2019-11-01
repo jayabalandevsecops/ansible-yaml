@@ -1,0 +1,10 @@
+- name: Hello World
+  hosts: anode
+  remote_user: ansible
+  become: true
+  vars:
+    msg_var: SriRamajeyam...
+  tasks:
+    - name: debug message 1
+      debug:
+        msg: "{{ msg_var }}"
